@@ -196,6 +196,8 @@ router.post('/:groupId/posts', async (req, res) => {
     }
 
     try {
+        const hashedPostPassword = await bcrypt.hash(postPassword, 10); // 비밀번호 해시화
+        
         // 그룹 존재 여부 확인
         const group = await Group.findById(groupId);
         if (!group) {
@@ -214,7 +216,7 @@ router.post('/:groupId/posts', async (req, res) => {
             nickname,
             title,
             content,
-            postPassword, // 해시하지 않으려면 이 라인을 유지
+            postPassword : hashedPostPassword, // 해시하지 않으려면 이 라인을 유지
             groupPassword, // 그룹 비밀번호는 필요 없으니 제거 가능
             imageUrl,
             tags,
