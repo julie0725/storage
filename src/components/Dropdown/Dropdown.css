@@ -1,0 +1,20 @@
+.dropdown {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  margin-left: auto;
+}
+
+.dropdown button {
+  width: 160px;
+  height: 45px;
+  border: 1px solid #ccc;
+  background-color: #333;
+  color: white;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.dropdown button:hover {
+  background-color: #555;
+}

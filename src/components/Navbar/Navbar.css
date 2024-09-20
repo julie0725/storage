@@ -1,0 +1,30 @@
+.navbar {
+  display: flex;
+  justify-content: center; /* 중앙 정렬 */
+  align-items: center; /* 수직 가운데 정렬 */
+  position: relative;
+  padding: 20px;
+}
+
+.logo {
+  width: 137px;
+  height: 48px;
+}
+
+.create-group-button {
+  position: absolute;
+  right: 20px; /* 오른쪽 끝에 위치 */
+  top: 50%;
+  transform: translateY(-50%); /* 수직 가운데 정렬 */
+  width: 200px;
+  height: 45px;
+  background-color: #333;
+  color: white;
+  border: none;
+  border-radius: 6px 0px 0px 0px;
+  cursor: pointer;
+}
+
+.create-group-button:hover {
+  background-color: #555;
+}

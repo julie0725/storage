@@ -1,0 +1,13 @@
+.group-card-list {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* 3개의 카드 열 생성 */
+  gap: 20px; /* 카드 간격 */
+  padding: 20px;
+}
+
+/* .group-card-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 30px;
+  padding: 20px;
+} */
