@@ -1,16 +1,3 @@
-// const mongoose = require('mongoose');
-
-// const groupSchema = new mongoose.Schema({
-//     name: { type: String, required: true },
-//     image: { type: String },
-//     description: { type: String },
-//     isPublic: { type: Boolean, default: true },
-//     password: { type: String, required: true },
-//     createdAt: { type: Date, default: Date.now }
-// });
-
-// module.exports = mongoose.model('Group', groupSchema);
-
 const mongoose = require('mongoose');
 
 const groupSchema = new mongoose.Schema({
