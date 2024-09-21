@@ -2,20 +2,19 @@ import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { fetchGroups } from "../utils/api";
 import GroupCardList from "../components/GroupCardList/GroupCardList";
-import GroupToggle from "../components/GroupToggle/GroupToggle"; // GroupToggle 컴포넌트 import
-import EmptyGroupImg from "../assets/card/type=group.png"; // 상대 경로 수정
-import "./GroupListPage.css"; // 스타일링을 위한 css 파일
+import GroupToggle from "../components/GroupToggle/GroupToggle";
+import EmptyGroupImg from "../assets/card/type=group.png";
+import "./GroupListPage.css";
 
 const GroupListPage = () => {
-  const [isPublic, setIsPublic] = useState(true); // 기본 상태는 Public
-  const [groups, setGroups] = useState([]); // 그룹 리스트 상태
-  const [loading, setLoading] = useState(true); // 로딩 상태
+  const [isPublic, setIsPublic] = useState(true); // 기본 상태: Public
+  const [groups, setGroups] = useState([]);
+  const [loading, setLoading] = useState(true);
   const [page, setPage] = useState(1);
-  const [pageSize] = useState(10); // 페이지당 10개 아이템
-  const [sortBy] = useState("latest"); // 정렬 기준: 최신순
+  const [pageSize] = useState(10); // 페이지당 10개
+  const [sortBy] = useState("latest");
   const [keyword, setKeyword] = useState(""); // 검색어 상태
 
-  // 그룹 데이터를 가져오는 함수
   const loadGroups = async () => {
     setLoading(true);
     try {
@@ -26,7 +25,7 @@ const GroupListPage = () => {
         keyword,
         isPublic,
       });
-      setGroups(data.data); // API에서 받은 그룹 데이터를 상태에 저장
+      setGroups(data.data); // API 그룹 데이터 -> 상태에 저장
     } catch (error) {
       console.error("그룹을 불러오는데 오류가 발생했습니다", error);
     } finally {
@@ -34,12 +33,11 @@ const GroupListPage = () => {
     }
   };
 
-  // 컴포넌트가 처음 렌더링될 때 그룹 데이터를 로드
   useEffect(() => {
     loadGroups();
   }, [page, pageSize, sortBy, keyword, isPublic]);
 
-  // 로딩 중이거나 그룹이 없을 때 표시할거야
+  // 로딩 중이거나 그룹이 없을 때 표시할거야 - 보류
   const renderEmptyState = () => (
     <div className="empty-group-list">
       <img src={EmptyGroupImg} alt="등록된 그룹이 없습니다." />
@@ -51,7 +49,7 @@ const GroupListPage = () => {
     </div>
   );
 
-  // 로딩 중일 때 or 그룹이 없을 때 보여줄 내용을 결정
+  // 로딩 중일 때 or 그룹이 없을 때 보여줄 내용
   const renderGroupContent = () => {
     if (loading) {
       return <p>로딩 중...</p>;
