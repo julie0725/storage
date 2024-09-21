@@ -1,0 +1,65 @@
+.card-info-container {
+  display: flex;
+  background-color: #fff;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.card-info-image {
+  width: 273px;
+  height: 273px;
+  border-radius: 10px;
+  margin-right: 20px;
+}
+
+.card-info-text {
+  flex-grow: 1;
+}
+
+.card-info-header {
+  display: flex;
+  justify-content: space-between;
+  font-size: 18px;
+  font-weight: bold;
+  color: #888;
+}
+
+.group-name {
+  font-size: 24px;
+  font-weight: bold;
+  margin: 10px 0;
+}
+
+.group-description {
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+
+.group-stats {
+  font-size: 14px;
+  color: #555;
+}
+
+.badge-list {
+  display: flex;
+  gap: 10px;
+  margin: 15px 0;
+}
+
+.badge {
+  background-color: #f0f0f0;
+  padding: 5px 10px;
+  border-radius: 20px;
+  font-size: 14px;
+}
+
+.like-button {
+  background-color: #f5c44b;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+}

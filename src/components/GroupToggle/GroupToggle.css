@@ -1,23 +1,20 @@
 .group-toggle {
   display: flex;
-  justify-content: flex-start;
-  align-items: center;
-  gap: 10px;
-  margin-right: 20px;
 }
 
-.group-toggle button {
-  width: 68px;
-  height: 38px;
-  border: none;
-  background-color: #333;
-  color: white;
-  font-size: 14px;
-  font-weight: 700;
-  cursor: pointer;
-  border-radius: 22.5px;
+.toggle-button {
+  background: none; /* 버튼 배경 제거 */
+  border: none; /* 버튼 테두리 제거 */
+  cursor: pointer; /* 마우스 커서 변경 */
+  padding: 0; /* 버튼 내부 패딩 제거 */
+  margin: 0; /* 버튼 외부 마진 제거 */
 }
 
-.group-toggle button.active {
-  background-color: #555;
+.toggle-button img {
+  width: 66px; /* 이미지 너비 */
+  height: 45px; /* 이미지 높이 */
+  margin: 0; /* 이미지 주변 여백 제거 */
+  padding: 0; /* 이미지 내부 패딩 제거 */
+  border-radius: 22.5px 0 0 0; /* 모서리 둥글게 */
+  opacity: 1; /* 투명도 설정 */
 }

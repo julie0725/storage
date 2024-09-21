@@ -1,0 +1,29 @@
+.group-info-container {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 20px;
+}
+
+.group-actions {
+  display: flex;
+  gap: 10px;
+}
+
+.edit-button,
+.delete-button {
+  background-color: #f0f0f0;
+  border: 1px solid #ccc;
+  padding: 10px 15px;
+  font-size: 14px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.edit-button:hover {
+  background-color: #e0e0e0;
+}
+
+.delete-button:hover {
+  background-color: #ffdddd;
+  border-color: #ff8888;
+}
